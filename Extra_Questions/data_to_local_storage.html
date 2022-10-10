@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+        <button type="submit" id="send" onclick=send_data_to_local_storage()>Send</button>
+        <button type="submit" id="receive" onclick=fetch_data_from_local_storage()>Receive</button>
+
+
+        <div id="display">
+
+        </div>
+
+    <script>
+        const data = [{
+            name: "vivek",
+            age: 23
+        },
+        {
+            name: "tiwari",
+            age: 22
+        }]
+
+
+        const send_data_to_local_storage = () => localStorage.setItem("data", JSON.stringify(data));
+
+
+        const fetch_data_from_local_storage = () => {
+            const convert_String_to_objData = JSON.parse(localStorage.getItem("data"));
+
+            console.log(convert_String_to_objData);
+        }
+
+        // send_data_to_local_storage();
+
+        console.log("....Processing data")
+
+        // fetch_data_from_local_storage();
+    </script>
+</body>
+
+</html>

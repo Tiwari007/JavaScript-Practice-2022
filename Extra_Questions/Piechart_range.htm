@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            font-size: 20px;
+            margin: 20px;
+            width: 400px;
+        }
+
+        .pieChart{
+            width: 200px;
+            height: 200px;
+            margin: 20px 110px;
+            background-image: conic-gradient(green var(--percentage), lightgreen 0);
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <input type="range" id="rangeHandler" value="10" />
+    
+    <div class="pieChart" style="--percentage: 20%"></div>
+
+
+    <script>
+        const pieChart = document.querySelector('.pieChart');
+        document.querySelector('#rangeHandler').addEventListener('input', (e) => {
+            pieChart.style = `--percentage: ${e.target.value}%`
+        })
+    </script>
+</body>
+</html>
