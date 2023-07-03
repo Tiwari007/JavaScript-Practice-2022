@@ -13,4 +13,4 @@ var peakIndexInMountainArray = function(nums, target) {
     return nums[start] 
 };
 
-console.log(peakIndexInMountainArray([1,2,3,4,5,4,2], 4))
+console.log(peakIndexInMountainArray([1,2,3,8,5,4,2], 4))

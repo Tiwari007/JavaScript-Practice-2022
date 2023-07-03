@@ -1,3 +1,4 @@
 {
-    "editor.guides.bracketPairs": "active"
+    "editor.guides.bracketPairs": "active",
+    "compile-hero.disable-compile-files-on-did-save-code": true
 }
