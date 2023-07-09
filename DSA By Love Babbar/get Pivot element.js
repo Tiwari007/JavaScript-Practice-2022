@@ -6,6 +6,11 @@ const getPivot = (arr) => {
     let start = 0
     let end  = arr.length - 1
 
+
+    // This condition is needed to handle the case when array
+        // is not rotated at all
+    if(arr[end] > arr[start]) return 0;
+
     while(start < end){
         let mid  = parseInt((start + end)/2)
         if(arr[mid] >= arr[0]) // that means we are in the upper line as we need to find the lowest element that means
@@ -21,6 +26,6 @@ const getPivot = (arr) => {
     return start
 }
 
-let arr = [8,9,1,2,3,5,7]
+let arr = [1,2,3,5,7]
 let indexOfPivot = getPivot(arr)
 console.log(`The smallest value is ${arr[indexOfPivot]} at index ${indexOfPivot}`)
