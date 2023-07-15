@@ -72,3 +72,31 @@ for(let i=1; i< arrForDuplicate.length; i++){
 console.log("duplicate value by using XOR method is", duplicate);
 
 
+
+
+// for duplicate
+{
+    function findDuplicates(arr) {
+        const count = {};
+        const duplicates = [];
+      
+        for (let i = 0; i < arr.length; i++) {
+          const element = arr[i];
+          count[element] = (count[element] || 0) + 1;
+          
+          if (count[element] === 2) {
+            duplicates.push(element);
+          }
+        }
+
+        console.log("count", count);
+      
+        return duplicates;
+      }
+
+
+      console.log(findDuplicates([1, 2, 3, 3, 2, 4, 5, 5, 4]));
+      
+}
+
+
