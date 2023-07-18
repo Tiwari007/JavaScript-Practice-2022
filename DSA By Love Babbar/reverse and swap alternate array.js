@@ -49,3 +49,25 @@
 
 
 }
+
+
+{
+    // Reverse an array after given position
+
+    let arr = [10, 9, 8, 7, 6]
+    let m = 2
+
+    // o/p: [1, 2, 3, 4, 6, 5]
+
+    let start = m + 1
+    let end = arr.length - 1
+    while(start <= end){
+        temp = arr[start]
+        arr[start] = arr[end]
+        arr[end] = temp
+        start++
+        end--
+    }
+
+    console.log("reverse array after ", m, " position is: ", arr);
+}
